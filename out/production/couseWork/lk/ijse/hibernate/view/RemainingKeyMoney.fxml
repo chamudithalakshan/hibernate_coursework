@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="lk.ijse.hibernate.controller.RemainingKeyMoneyController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="944.0" style="-fx-background-color: #30336b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TableView layoutY="-3.0" prefHeight="792.0" prefWidth="944.0">
+            <columns>
+                <TableColumn prefWidth="92.0" text="Student Id" />
+                <TableColumn prefWidth="133.0" text="Name" />
+                <TableColumn prefWidth="133.0" text="Address" />
+                <TableColumn prefWidth="176.0" text="Contact" />
+                <TableColumn prefWidth="166.0" text="DoB" />
+                <TableColumn prefWidth="99.0" text="Gender" />
+                <TableColumn prefWidth="141.0" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>

@@ -1,0 +1,16 @@
+.txtStyle{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+.reserve_button{
+    -fx-background-color:green;
+}
+.StudentBtn{
+    -fx-background-color: red;
+}
+.reserve_button:hover{
+    -fx-text-fill: black;
+}
+.StudentBtn:hover{
+    -fx-text-fill: black;
+}

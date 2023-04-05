@@ -1,0 +1,10 @@
+.prmText{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+.addBtn{
+    -fx-background-color: green;
+}
+.addBtn:hover{
+    -fx-text-fill: black;
+}
