@@ -1,5 +1,7 @@
 package lk.ijse.hibernate.dao;
 
+import lk.ijse.hibernate.entity.Rooms;
+import lk.ijse.hibernate.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -13,7 +15,7 @@ public class FactoryConfiguration {
     private FactoryConfiguration() {
         Configuration configuration = new Configuration();/*.configure().addAnnotatedClass(Item.class);*/
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-//        configuration.addAnnotatedClass(Student.class).addAnnotatedClass(Program.class);
+       configuration.addAnnotatedClass(Student.class).addAnnotatedClass(Rooms.class);
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
 

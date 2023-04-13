@@ -7,17 +7,16 @@
 <?import java.lang.String?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="695.0" prefWidth="468.0" style="-fx-background-color: #30336b;" stylesheets="@../assets/style/AddStudent.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.AddNewwStudentFormController">
    <children>
-      <JFXTextField labelFloat="true" layoutX="25.0" layoutY="69.0" prefHeight="25.0" prefWidth="368.0" promptText="ID" styleClass="txtStyle" unFocusColor="WHITE" />
-      <JFXTextField labelFloat="true" layoutX="25.0" layoutY="183.0" prefHeight="25.0" prefWidth="368.0" promptText="Name" styleClass="txtStyle" unFocusColor="WHITE" />
-      <JFXTextField labelFloat="true" layoutX="25.0" layoutY="313.0" prefHeight="25.0" prefWidth="368.0" promptText="Address" styleClass="txtStyle" unFocusColor="WHITE" />
-      <JFXTextField labelFloat="true" layoutX="25.0" layoutY="442.0" prefHeight="25.0" prefWidth="368.0" promptText="Contact number" styleClass="txtStyle" unFocusColor="WHITE" />
-      <JFXDatePicker layoutX="77.0" layoutY="536.0" promptText="DoB" styleClass="txtStyle" />
-      <JFXCheckBox layoutX="39.0" layoutY="601.0" styleClass="txtStyle" text="Male" />
-      <JFXCheckBox layoutX="137.0" layoutY="601.0" styleClass="txtStyle" text="Female" />
-      <JFXButton layoutX="341.0" layoutY="640.0" prefHeight="25.0" prefWidth="84.0" text="ADD">
+      <JFXTextField fx:id="id" labelFloat="true" layoutX="25.0" layoutY="69.0" prefHeight="25.0" prefWidth="368.0" promptText="ID" styleClass="txtStyle" unFocusColor="WHITE" />
+      <JFXTextField fx:id="name" labelFloat="true" layoutX="25.0" layoutY="183.0" prefHeight="25.0" prefWidth="368.0" promptText="Name" styleClass="txtStyle" unFocusColor="WHITE" />
+      <JFXTextField fx:id="address" labelFloat="true" layoutX="25.0" layoutY="313.0" prefHeight="25.0" prefWidth="368.0" promptText="Address" styleClass="txtStyle" unFocusColor="WHITE" />
+      <JFXTextField fx:id="contactNmb" labelFloat="true" layoutX="25.0" layoutY="442.0" prefHeight="25.0" prefWidth="368.0" promptText="Contact number" styleClass="txtStyle" unFocusColor="WHITE" />
+      <JFXDatePicker fx:id="dob" layoutX="77.0" layoutY="536.0" promptText="DoB" styleClass="txtStyle" />
+      <JFXCheckBox fx:id="male" layoutX="39.0" layoutY="601.0" styleClass="txtStyle" text="Male" />
+      <JFXCheckBox fx:id="female" layoutX="137.0" layoutY="601.0" styleClass="txtStyle" text="Female" />
+      <JFXButton layoutX="341.0" layoutY="640.0" onAction="#AddOnAction" prefHeight="25.0" prefWidth="84.0" text="ADD">
          <styleClass>
             <String fx:value="txtStyle" />
             <String fx:value="reserve_button" />

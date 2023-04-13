@@ -1,6 +1,11 @@
 package lk.ijse.hibernate.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Rooms {
+    @Id
     private String Room_id;
     private String type;
     private String Key_money;

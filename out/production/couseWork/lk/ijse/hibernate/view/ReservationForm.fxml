@@ -11,7 +11,7 @@
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="944.0" style="-fx-background-color: #30336b;" stylesheets="@../assets/style/Reservation.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.ReservationFormController">
    <children>
-      <TableView layoutY="391.0" prefHeight="407.0" prefWidth="944.0">
+      <TableView fx:id="tblReservation" layoutY="391.0" prefHeight="407.0" prefWidth="944.0">
         <columns>
           <TableColumn prefWidth="114.0" text="Reserv ID" />
           <TableColumn prefWidth="313.0" text="Date" />
@@ -20,19 +20,19 @@
             <TableColumn prefWidth="196.0" text="Status" />
         </columns>
       </TableView>
-      <JFXComboBox layoutX="38.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Room type" styleClass="txtStyle" stylesheets="@../assets/style/Reservation.css" />
-      <JFXComboBox layoutX="300.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Student Id" styleClass="txtStyle" />
-      <Label layoutX="623.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="Key money" />
-      <Label layoutX="785.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="room Qty" />
-      <CheckBox layoutX="729.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Paid" />
-      <CheckBox layoutX="832.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Non paid" />
+      <JFXComboBox fx:id="cmbRoomType" layoutX="38.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Room type" styleClass="txtStyle" stylesheets="@../assets/style/Reservation.css" />
+      <JFXComboBox fx:id="cmbStudentId" layoutX="300.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Student Id" styleClass="txtStyle" />
+      <Label fx:id="lblKeymoney" layoutX="623.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="Key money" />
+      <Label fx:id="lblRoomQty" layoutX="785.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="room Qty" />
+      <CheckBox fx:id="chkPaid" layoutX="729.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Paid" />
+      <CheckBox fx:id="chkNonPaid" layoutX="832.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Non paid" />
       <JFXButton layoutX="795.0" layoutY="342.0" onAction="#addStudentOnAction" text="Add new Student">
          <styleClass>
             <String fx:value="txtStyle" />
             <String fx:value="StudentBtn" />
          </styleClass>
       </JFXButton>
-      <JFXButton layoutX="687.0" layoutY="342.0" text="Make reserve">
+      <JFXButton layoutX="687.0" layoutY="342.0" onAction="#makeReservationOnAction" text="Make reserve">
          <styleClass>
             <String fx:value="txtStyle" />
             <String fx:value="reserve_button" />

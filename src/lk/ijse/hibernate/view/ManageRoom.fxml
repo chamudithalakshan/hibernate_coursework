@@ -7,9 +7,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane fx:controller="lk.ijse.hibernate.controller.ManageRoomController" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="944.0" style="-fx-background-color: #30336b;" stylesheets="@../assets/style/ManageRoom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="944.0" style="-fx-background-color: #30336b;" stylesheets="@../assets/style/ManageRoom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.ManageRoomController">
    <children>
-      <TableView layoutY="388.0" prefHeight="407.0" prefWidth="944.0">
+      <TableView fx:id="tblRoom" layoutY="388.0" prefHeight="407.0" prefWidth="944.0">
         <columns>
           <TableColumn prefWidth="121.0" text="Room_id" />
           <TableColumn prefWidth="259.0" text="TYPE" />
@@ -18,15 +18,15 @@
             <TableColumn prefWidth="185.0" />
         </columns>
       </TableView>
-      <JFXButton layoutX="798.0" layoutY="317.0" prefHeight="39.0" prefWidth="132.0" text="Add new Room">
+      <JFXButton layoutX="798.0" layoutY="317.0" onAction="#AddNewRoomOnAction" prefHeight="39.0" prefWidth="132.0" text="Add new Room">
          <styleClass>
             <String fx:value="prmText" />
             <String fx:value="addBtn" />
          </styleClass>
       </JFXButton>
-      <JFXTextField layoutX="49.0" layoutY="57.0" prefHeight="25.0" prefWidth="214.0" promptText="Room_id" styleClass="prmText" />
-      <JFXTextField layoutX="49.0" layoutY="148.0" prefHeight="25.0" prefWidth="214.0" promptText="Type" styleClass="prmText" />
-      <JFXTextField layoutX="49.0" layoutY="232.0" prefHeight="25.0" prefWidth="214.0" promptText="Key_money" styleClass="prmText" />
-      <JFXTextField layoutX="49.0" layoutY="311.0" prefHeight="25.0" prefWidth="66.0" promptText="Qty" styleClass="prmText" />
+      <JFXTextField fx:id="roomId" layoutX="49.0" layoutY="57.0" prefHeight="25.0" prefWidth="214.0" promptText="Room_id" styleClass="prmText" />
+      <JFXTextField fx:id="type" layoutX="49.0" layoutY="148.0" prefHeight="25.0" prefWidth="214.0" promptText="Type" styleClass="prmText" />
+      <JFXTextField fx:id="keyMoney" layoutX="49.0" layoutY="232.0" prefHeight="25.0" prefWidth="214.0" promptText="Key_money" styleClass="prmText" />
+      <JFXTextField fx:id="qty" layoutX="49.0" layoutY="311.0" prefHeight="25.0" prefWidth="66.0" promptText="Qty" styleClass="prmText" />
    </children>
 </Pane>
