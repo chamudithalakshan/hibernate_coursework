@@ -1,5 +1,6 @@
 package lk.ijse.hibernate.dao;
 
+import lk.ijse.hibernate.dao.custom.impl.RoomDaoImpl;
 import lk.ijse.hibernate.dao.custom.impl.StudentDaoImpl;
 
 public class DAOFactory {
@@ -21,8 +22,8 @@ public class DAOFactory {
         switch (types) {
             case STUDENT:
                 return new StudentDaoImpl();
-//            case ROOM:
-//                return new RoomsDaoImpl();
+            case ROOM:
+                return new RoomDaoImpl();
             default:
                 return null;
         }
