@@ -13,19 +13,19 @@
    <children>
       <TableView fx:id="tblReservation" layoutY="391.0" prefHeight="407.0" prefWidth="944.0">
         <columns>
-          <TableColumn prefWidth="114.0" text="Reserv ID" />
-          <TableColumn prefWidth="313.0" text="Date" />
-            <TableColumn prefWidth="145.0" text="Student ID" />
-            <TableColumn prefWidth="175.0" text="Room Type ID" />
-            <TableColumn prefWidth="196.0" text="Status" />
+          <TableColumn fx:id="clmStudentId" prefWidth="114.0" text="Student Id" />
+          <TableColumn fx:id="clmName" prefWidth="313.0" text="Student name" />
+            <TableColumn fx:id="clmRoomType" prefWidth="175.0" text="Room Type ID" />
+            <TableColumn fx:id="clmStatus" prefWidth="201.0" text="Status" />
+            <TableColumn prefWidth="140.0" />
         </columns>
       </TableView>
-      <JFXComboBox fx:id="cmbRoomType" layoutX="38.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Room type" styleClass="txtStyle" stylesheets="@../assets/style/Reservation.css" />
+      <JFXComboBox fx:id="cmbRoomType" layoutX="38.0" layoutY="71.0" onAction="#roomTypeOnAction" prefHeight="25.0" prefWidth="214.0" promptText="Room type" styleClass="txtStyle" stylesheets="@../assets/style/Reservation.css" />
       <JFXComboBox fx:id="cmbStudentId" layoutX="300.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" promptText="Student Id" styleClass="txtStyle" />
       <Label fx:id="lblKeymoney" layoutX="623.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="Key money" />
       <Label fx:id="lblRoomQty" layoutX="785.0" layoutY="75.0" prefHeight="43.0" prefWidth="128.0" styleClass="txtStyle" text="room Qty" />
-      <CheckBox fx:id="chkPaid" layoutX="729.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Paid" />
-      <CheckBox fx:id="chkNonPaid" layoutX="832.0" layoutY="175.0" mnemonicParsing="false" styleClass="txtStyle" text="Non paid" />
+      <CheckBox fx:id="chkPaid" layoutX="729.0" layoutY="175.0" mnemonicParsing="false" onAction="#onSelectPaid" styleClass="txtStyle" text="Paid" />
+      <CheckBox fx:id="chkNonPaid" layoutX="832.0" layoutY="175.0" mnemonicParsing="false" onAction="#onSelectNonPaid" styleClass="txtStyle" text="Non paid" />
       <JFXButton layoutX="795.0" layoutY="342.0" onAction="#addStudentOnAction" text="Add new Student">
          <styleClass>
             <String fx:value="txtStyle" />

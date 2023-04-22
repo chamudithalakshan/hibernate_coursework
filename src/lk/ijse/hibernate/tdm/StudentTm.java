@@ -1,21 +1,70 @@
 package lk.ijse.hibernate.tdm;
 
+import lk.ijse.hibernate.entity.Rooms;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class StudentTm {
-    private String Student_id;
+        private String Student_id;
+
+
+
     private String studentName;
     private String contactNo;
-    private int age;
+
     private String gender;
 
     private String Address;
 
-    public StudentTm(String student_id, String studentName, String contactNo, int age, String gender, String address) {
+    private List<Rooms> roomList = new ArrayList<>();
+
+    private String paymentStatus;
+
+    private String RoomType;
+
+    public StudentTm(String student_id, String studentName, String contactNo, String gender, String address,String RoomType, String paymentStatus) {
         Student_id = student_id;
         this.studentName = studentName;
         this.contactNo = contactNo;
-        this.age = age;
         this.gender = gender;
         Address = address;
+        this.RoomType = RoomType;
+        this.paymentStatus = paymentStatus;
+    }
+
+    public StudentTm(String student_id, String studentName, String contactNo, String gender, String address, String paymentStatus) {
+        Student_id = student_id;
+        this.studentName = studentName;
+        this.contactNo = contactNo;
+        this.gender = gender;
+        Address = address;
+        this.paymentStatus = paymentStatus;
+    }
+
+    public String getRoomType() {
+        return RoomType;
+    }
+
+    public void setRoomType(String roomType) {
+        RoomType = roomType;
+    }
+
+    public List<Rooms> getRoomList() {
+        return roomList;
+    }
+
+    public void setRoomList(List<Rooms> roomList) {
+        this.roomList = roomList;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 
     public StudentTm() {
@@ -45,13 +94,6 @@ public class StudentTm {
         this.contactNo = contactNo;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public String getGender() {
         return gender;
@@ -75,7 +117,6 @@ public class StudentTm {
                 "Student_id='" + Student_id + '\'' +
                 ", studentName='" + studentName + '\'' +
                 ", contactNo='" + contactNo + '\'' +
-                ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", Address='" + Address + '\'' +
                 '}';

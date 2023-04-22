@@ -6,6 +6,7 @@ import lk.ijse.hibernate.entity.Rooms;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.Query;
 import java.util.List;
 
 public class RoomDaoImpl implements RoomDao {
@@ -27,16 +28,58 @@ public class RoomDaoImpl implements RoomDao {
 
     @Override
     public boolean update(Rooms rooms) throws Exception {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction tx = session.beginTransaction();
+        session.update(rooms);
+        tx.commit();
+        session.close();
+        return true;
     }
 
     @Override
-    public Rooms search(String s) throws Exception {
+    public List<Rooms> search(String s) throws Exception {
         return null;
     }
 
     @Override
     public List<Rooms> getAll() throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Rooms");
+        System.out.println(q);
+        List results = q.getResultList();
+        tx.commit();
+        session.close();
+        return results;
     }
+
+    @Override
+    public List<Rooms> getRoomType() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Rooms");
+        System.out.println(q);
+        List results = q.getResultList();
+
+        tx.commit();
+        session.close();
+        return results;
+    }
+
+    @Override
+    public List<Rooms> getRoomByType(String type) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction tx = session.beginTransaction();
+        Query q = session.createQuery("from Rooms r where r.type= :type");
+        q.setParameter("type", type);
+        System.out.println(q);
+        List results = q.getResultList();
+
+        tx.commit();
+        session.close();
+        return results;
+    }
+
+
 }
+

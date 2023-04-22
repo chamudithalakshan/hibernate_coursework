@@ -1,7 +1,11 @@
 package lk.ijse.hibernate.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Rooms {
@@ -10,6 +14,17 @@ public class Rooms {
     private String type;
     private String Key_money;
     private int Qty;
+
+    @ManyToMany(mappedBy = "roomList", fetch = FetchType.EAGER)
+    private List<Student> studentList = new ArrayList<>();
+
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
 
     public Rooms() {
     }

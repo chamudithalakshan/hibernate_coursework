@@ -9,7 +9,7 @@ public interface CrudDAO<T, ID> extends SuperDAO {
 
     boolean update(T t) throws Exception;
 
-    T search(ID id) throws Exception;
+    List<T> search(ID id) throws Exception;
 
     List<T> getAll() throws Exception;
 }
